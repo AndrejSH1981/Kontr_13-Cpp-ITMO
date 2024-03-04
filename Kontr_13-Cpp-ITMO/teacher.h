@@ -3,29 +3,29 @@
 #include <string>
 
 // teacher.h
-//  Класс teacher производный от класса human
+//  РљР»Р°СЃСЃ teacher РїСЂРѕРёР·РІРѕРґРЅС‹Р№ РѕС‚ РєР»Р°СЃСЃР° human
 using namespace std;
 
 class teacher : public human {
-    // Конструктор класса teacher
+    // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСЃР° teacher
 public:
     teacher(
         string last_name,
         string name,
         string second_name,
 
-        // Количество учебных часов за семестр у преподавателя
+        // РљРѕР»РёС‡РµСЃС‚РІРѕ СѓС‡РµР±РЅС‹С… С‡Р°СЃРѕРІ Р·Р° СЃРµРјРµСЃС‚СЂ Сѓ РїСЂРµРїРѕРґР°РІР°С‚РµР»СЏ
         unsigned int work_time
     )
         : human(last_name, name, second_name) {
         this->work_time = work_time;
     }
 
-    // Получение количества учебных часов
+    // РџРѕР»СѓС‡РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° СѓС‡РµР±РЅС‹С… С‡Р°СЃРѕРІ
     virtual unsigned int get_work_time() {
         return this->work_time;
     }
 private:
-    // Учебные часы
+    // РЈС‡РµР±РЅС‹Рµ С‡Р°СЃС‹
     unsigned int work_time;
 };
