@@ -6,10 +6,10 @@
 using namespace std;
 
 // student.h
-// Новый класс student, который наследник класса human.
+// РќРѕРІС‹Р№ РєР»Р°СЃСЃ student, РєРѕС‚РѕСЂС‹Р№ РЅР°СЃР»РµРґРЅРёРє РєР»Р°СЃСЃР° human.
 class student : public human {
 public:
-    // Конструктор класса Student
+    // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСЃР° Student
     student(
         string last_name,
         string name,
@@ -20,15 +20,15 @@ public:
         this->scores = scores;
     }
 
-    // Получение среднего балла студента
+    // РџРѕР»СѓС‡РµРЅРёРµ СЃСЂРµРґРЅРµРіРѕ Р±Р°Р»Р»Р° СЃС‚СѓРґРµРЅС‚Р°
     virtual float get_average_score() {
-        // Общее количество оценок
+        // РћР±С‰РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РѕС†РµРЅРѕРє
         unsigned int count_scores = this->scores.size();
-        // Сумма всех оценок студента
+        // РЎСѓРјРјР° РІСЃРµС… РѕС†РµРЅРѕРє СЃС‚СѓРґРµРЅС‚Р°
         unsigned int sum_scores = 0;
-        // Средний балл
-
+        // РЎСЂРµРґРЅРёР№ Р±Р°Р»Р»
         float average_score;
+        
         for (unsigned int i = 0; i < count_scores; ++i) {
             sum_scores += this->scores[i];
         }
@@ -37,6 +37,6 @@ public:
     }
 
 private:
-    // Оценки студента
+    // РћС†РµРЅРєРё СЃС‚СѓРґРµРЅС‚Р°
     vector<int> scores;
 };
