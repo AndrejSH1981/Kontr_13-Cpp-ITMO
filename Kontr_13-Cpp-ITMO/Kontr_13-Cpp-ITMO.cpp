@@ -1,4 +1,4 @@
-﻿// Kontr_13-Cpp-ITMO.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+// Kontr_13-Cpp-ITMO.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
 #include <iostream>
@@ -28,17 +28,22 @@ int main() {
     scores.push_back(3);
     scores.push_back(3);
     scores.push_back(3);
-    // Конкреьный студент - объект класса student
-    student* stud = new student("Петров", "Иван", "Алексеевич", scores);
+    bool b = true;
 
-    cout << stud->get_full_name() << endl;
-    wcout << L"Средний балл : " << stud->get_average_score() << endl;
+
+    human* human1;
+    // Конкреьный студент - объект класса student
+    student stud("Петров", "Иван", "Алексеевич", scores);
+    human1 = &stud;
+    cout << human1->get_full_name() << endl;
+
 
     unsigned int teacher_work_time = 40;
-    teacher* tch = new teacher("Сергеев", "Дмитрий", "Сергеевич", teacher_work_time);
 
-    cout << tch->get_full_name() << endl;
-    wcout << L"Количество часов: " << tch->get_work_time() << endl;
+    teacher tch("Сергеев", "Дмитрий", "Сергеевич", teacher_work_time);
+    human1 = &tch;
+    cout << human1->get_full_name() << endl;
+
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
@@ -51,3 +56,4 @@ int main() {
 //   4. В окне "Список ошибок" можно просматривать ошибки.
 //   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
 //   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
+
