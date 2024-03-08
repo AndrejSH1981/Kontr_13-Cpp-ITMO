@@ -28,9 +28,7 @@ int main() {
     scores.push_back(3);
     scores.push_back(3);
     scores.push_back(3);
-    bool b = true;
-
-
+    
     human* human1;
     // Конкреьный студент - объект класса student
     student stud("Петров", "Иван", "Алексеевич", scores);
